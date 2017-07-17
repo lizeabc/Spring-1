@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--配置工厂的实例  -->
+<bean id="carFactory" class="com.atguigu.spring.beans.factory.InstranceCarFactory"></bean>
+<!-- 通过实例工厂方法来配置bean -->
+<bean id="car" factory-bean="carFactory" factory-method="getCar">
+	<constructor-arg value="ford"></constructor-arg>
+
+</bean>
+</beans>
